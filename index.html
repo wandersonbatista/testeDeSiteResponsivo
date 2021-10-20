@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Starbucks Website Landing Page</title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="img/logo.png" class="logo"></a>
+            <div class="toggle" onclick="tgMenu()"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's new?</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffe <br> It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto quaerat sint quibusdam eius porro dolore cum qui nobis. Perspiciatis quia magni fugiat voluptatum doloribus, iste voluptates recusandae reiciendis accusamus! Odio!</p>
+                <a href="#">Learn more.</a>
+            </div>
+            <div class="imgBox">
+                <img src="img/img1.png"class="starbucks" alt="green">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="img/thumb1.png" onclick ="slider('img/img1.png'); circleColor('#017143')" alt="thumb1"></li>
+            <li><img src="img/thumb2.png" onclick ="slider('img/img2.png'); circleColor('#eb7495')" alt="thumb2"></li>
+            <li><img src="img/thumb3.png" onclick ="slider('img/img3.png'); circleColor('#d752b1')" alt="thumb3"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="img/facebook.png" alt="facebook"></a></li>
+            <li><a href="#"><img src="img/twitter.png" alt="facebook"></a></li>
+            <li><a href="#"><img src="img/instagram.png" alt="facebook"></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function slider(anything){
+            document.querySelector('.starbucks').src=anything;
+        }
+        function circleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+        function tgMenu(){
+            var menuTg = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation')
+            menuTg.classList.toggle('active');
+            navigation.classList.toggle('active');
+
+        }
+
+    </script>
+</body>
+</html>
